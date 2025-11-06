@@ -1,0 +1,83 @@
+<div class=" w-100 vh-100 d-flex justify-content-center align-items-center bg-my-lightblue">
+    <div>
+        <button class="back-home-btn btn btn-primary d-flex align-items-center gap-2 bg-transparent text-dark border-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5" />
+            </svg>
+            <span>Back to Home</span>
+        </button>
+        <div class="bg-white d-flex flex-column justify-content-center">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <img class="ajirio-logo" src="ajirio.png" alt="ajirio logo">
+                <h2 class="text-dark">Welcome to Ajirio</h2>
+                <p class="text-secondary">Create your account to get started</p>
+            </div>
+
+            <!-- page switch component -->
+            <div class="switcher d-flex align-items-center justify-content-center">
+                @for(n of statesToBeToggled; track n){
+                <div>
+                    <p>{{n}}</p>
+                </div>
+                }
+            </div>
+
+            <!-- Registration for different users -->
+            <div>
+                <div>
+                    <p>I am a...</p>
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-workspace" viewBox="0 0 16 16">
+                        <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                        <path
+                            d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.4 5.4 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2z" />
+                    </svg>
+                    <h2>Job Seeker</h2>
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-building-add" viewBox="0 0 16 16">
+                        <path
+                            d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0" />
+                        <path
+                            d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6.5a.5.5 0 0 1-1 0V1H3v14h3v-2.5a.5.5 0 0 1 .5-.5H8v4H3a1 1 0 0 1-1-1z" />
+                        <path
+                            d="M4.5 2a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-6 3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-6 3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z" />
+                    </svg>
+                    <h2>Employer</h2>
+                </div>
+            </div>
+            <form>
+                <div>
+                    <div>
+                        <label>First Name</label>
+                        <input type="text" placeholder="First Name">
+                    </div>
+                    <div>
+                        <label type="text" placeholder="lastName">Last Name</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="email" placeholder="example@gmail.com">
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="password">
+                </div>
+                <div>
+                    <label>Confirm Password</label>
+                    <input type="password">
+                </div>
+                <button>Confirm Password</button>
+            </form>
+            <p>Or continue with</p>
+            <button>Continue with Google</button>
+        </div>
+    </div>
+</div>

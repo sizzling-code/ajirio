@@ -1,0 +1,15 @@
+.bg-my-lightblue{
+    background: linear-gradient(135deg, rgb(239, 247, 255), #ecfffe)
+}
+.back-home-btn:hover{
+    cursor: pointer;
+    background-color: rgb(220, 236, 252) !important;
+}
+.ajirio-logo{
+    height: 5rem;
+    width: 5rem;
+}
+.switcher{
+    background-color: #fafafa;
+    border-radius: 5rem;
+}

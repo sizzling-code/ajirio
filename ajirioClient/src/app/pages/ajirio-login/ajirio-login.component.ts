@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { AjirioAuthFormComponent } from '../../components/ajirio-auth-form/ajirio-auth-form.component';
+import { AjirioFormInputComponent } from '../../components/ajirio-form-input/ajirio-form-input.component';
 
 @Component({
   selector: 'app-ajirio-login',
-  imports: [AjirioAuthFormComponent],
+  imports: [AjirioAuthFormComponent, AjirioFormInputComponent],
   templateUrl: './ajirio-login.component.html',
   styleUrl: './ajirio-login.component.css'
 })

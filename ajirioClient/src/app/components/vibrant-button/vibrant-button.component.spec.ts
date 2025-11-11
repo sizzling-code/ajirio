@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { AjirioRegisterComponent } from './ajirio-register.component';
 
-describe('AjirioRegisterComponent', () => {
-  let component: AjirioRegisterComponent;
-  let fixture: ComponentFixture<AjirioRegisterComponent>;
+import { VibrantButtonComponent } from './vibrant-button.component';
+
+describe('VibrantButtonComponent', () => {
+  let component: VibrantButtonComponent;
+  let fixture: ComponentFixture<VibrantButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AjirioRegisterComponent]
+      imports: [VibrantButtonComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AjirioRegisterComponent);
+    fixture = TestBed.createComponent(VibrantButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

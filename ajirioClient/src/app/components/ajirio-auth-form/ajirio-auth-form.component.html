@@ -25,18 +25,7 @@
                         <p (click)="setRole('Employer')" [class.activeUserRole]="userRole==='Employer'">Employer</p>
                 </div>
                 <form>
-                    <div class="d-flex justify-content-between">
-                        <app-ajirio-form-input inputLabel="First Name" inputId="firstName" inputType="text"
-                            inputPlaceholder="First Name"></app-ajirio-form-input>
-                        <app-ajirio-form-input inputLabel="Last Name" inputId="lasttName" inputType="text"
-                            inputPlaceholder="Last Name"></app-ajirio-form-input>
-                    </div>
-                    <app-ajirio-form-input inputLabel="Email" inputId="userEmail" inputType="email"
-                        inputPlaceholder="you@example.com"></app-ajirio-form-input>
-                    <app-ajirio-form-input inputLabel="Password" inputId="userPassword" inputType="password"
-                        inputPlaceholder="Enter your password"></app-ajirio-form-input>
-                    <app-ajirio-form-input inputLabel="Confirm password" inputId="confirmPassword" inputType="password"
-                        inputPlaceholder="Confirm your password"></app-ajirio-form-input>
+                    <ng-content></ng-content>
                     <button class="btn app-vibrant-btn app-full-width my-3">Create Account</button>
                     <p class="text-center text-secondary">or continue with</p>
                     <button class="btn btn-light app-full-width font-weight-bold">Continue with google</button>

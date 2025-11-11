@@ -1,15 +1,88 @@
-.bg-my-lightblue{
-    background: linear-gradient(135deg, rgb(239, 247, 255), #ecfffe)
+.this-div {
+    background-color: var(--background-light);
 }
-.back-home-btn:hover{
-    cursor: pointer;
-    background-color: rgb(220, 236, 252) !important;
+
+.half-box {
+    width: 50%;
 }
-.ajirio-logo{
-    height: 5rem;
-    width: 5rem;
+
+.small-login-box {
+    height: auto;
+    width: 70%;
+    background-color: white;
 }
-.switcher{
-    background-color: #fafafa;
-    border-radius: 5rem;
+
+.login-image-container {
+    background-color: var(--border-light);
+}
+
+.login-text-container {
+    background-color: var(--surface-light);
+}
+
+.jiajiri-text{
+    opacity: .8;
+}
+
+.login-image {
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container-box {
+    height: 100%;
+    max-width: 100%;
+}
+
+.ajiri-title {
+    color: var(--text-dark);
+}
+
+.app-vibrant-btn{
+    background-color: var(--vibrant-orange);
+    color: #fff;
+}
+.app-vibrant-btn:hover{
+    color: rgb(241, 241, 241);
+}
+
+.register-account-switcher{
+    border-bottom: 1px solid var(--text-secondary-dark);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0;
+}
+.auth-switch{
+    font-size: .9rem;
+}
+.register-account-switcher p{
+    font-size: .9rem;
+    font-weight: bold;
+    margin: 0;
+}
+.activeUserRole{
+    border-bottom: 3px solid #0d6efd;
+    color: #0d6efd;
+}
+
+@media (max-width: 768px) {
+    .login-image-container {
+        display: none;
+    }
+
+    .small-login-box {
+        width: 60%;
+    }
+
+    .half-box {
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width: 576px) {
+    .small-login-box {
+        width: 90%;
+    }
 }

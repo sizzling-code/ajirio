@@ -1,2 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+body {
+  font-family: 'Inter', sans-serif;
+}
 
+:root {
+    --electric-blue: #007BFF;
+    --vibrant-orange: #FF6B00;
+    --background-light: #F7F8FA;
+    --background-dark: #1A202C;
+    --background-gray-100: #f8f9fa;
+    --text-dark: #1A202C;
+    --text-light: #F7F8FA;
+    --text-secondary-light: #6C757D;
+    --text-secondary-dark: #A0AEC0;
+    --border-light: #dbe0e6;
+    --border-dark: #4A5568;
+    --surface-light: #FFFFFF;
+    --surface-dark: #2D3748;
+}
+
+.centered-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexed-container{
+    display: flex;
+}
+.ajiri-logo{
+    height: 28.8px;
+}
+.ajiri-create-title{
+    font-weight: bolder;
+}
+
+.app-full-width{
+    width: 100%;
+}
+.element-pointer{
+    cursor: pointer;
+}

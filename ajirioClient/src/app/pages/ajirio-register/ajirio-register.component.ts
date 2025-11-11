@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
+import { AjirioFormInputComponent } from '../../components/ajirio-form-input/ajirio-form-input.component';
 
 @Component({
   selector: 'app-ajirio-register',
-  imports: [],
+  imports: [AjirioFormInputComponent],
   templateUrl: './ajirio-register.component.html',
   styleUrl: './ajirio-register.component.css'
 })
 export class AjirioRegisterComponent {
-  statesToBeToggled = ['Sign In', 'Sign Up']
-  activeState = 'Sign In';
+  userRole = 'Seeker';
 
-  setState(){
-    
-  }
+  setRole(el:string){
+    this.userRole = el;
+    console.log(this.userRole);
+  }  
 }

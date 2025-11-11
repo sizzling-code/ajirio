@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { AjirioRegisterComponent } from './ajirio-register.component';
 
-describe('AjirioRegisterComponent', () => {
-  let component: AjirioRegisterComponent;
-  let fixture: ComponentFixture<AjirioRegisterComponent>;
+import { AjirioAuthFormComponent } from './ajirio-auth-form.component';
+
+describe('AjirioAuthFormComponent', () => {
+  let component: AjirioAuthFormComponent;
+  let fixture: ComponentFixture<AjirioAuthFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AjirioRegisterComponent]
+      imports: [AjirioAuthFormComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AjirioRegisterComponent);
+    fixture = TestBed.createComponent(AjirioAuthFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

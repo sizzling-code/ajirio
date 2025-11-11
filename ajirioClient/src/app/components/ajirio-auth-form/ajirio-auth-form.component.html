@@ -2,7 +2,7 @@
     <div class="small-login-box d-flex rounded shadow-lg">
         <div class="login-image-container half-box rounded-start py-3 px-2">
             <div class="container image-container-box centered-container">
-                <img src="https://cdn.pixabay.com/photo/2018/03/03/20/02/laptop-3196481_960_720.jpg"
+                <img [src]="imageUrl()"
                     class="login-image app-full-width rounded img-fluid">
             </div>
         </div>
@@ -17,8 +17,8 @@
                     </div>
                 </div>
                 <div>
-                    <h2 class="ajiri-create-title">Create Your Account</h2>
-                    <p class="text-secondary">Unlock your potential. Find the perfect Gig.</p>
+                    <h2 class="ajiri-create-title">{{authPageTitle()}}</h2>
+                    <p class="text-secondary">{{authPageTagLine()}}</p>
                 </div>
                 <div class="d-flex register-account-switcher">
                         <p [class.activeUserRole]="userRole==='Seeker'" (click)="setRole('Seeker')">Gig Seeker</p>
@@ -26,11 +26,11 @@
                 </div>
                 <form>
                     <ng-content></ng-content>
-                    <button class="btn app-vibrant-btn app-full-width my-3">Create Account</button>
+                    <button class="btn app-vibrant-btn app-full-width my-3">{{authButtonText()}}</button>
                     <p class="text-center text-secondary">or continue with</p>
                     <button class="btn btn-light app-full-width font-weight-bold">Continue with google</button>
                 </form>
-                <p class="text-center text-secondary mt-2 auth-switch">Already have an account? <span class="text-primary element-pointer">Sign In</span></p>
+                <p class="text-center text-secondary mt-2 auth-switch">{{pageRedirectText()}} <a [href]="redirectLink()"><span class="text-primary element-pointer">{{redirectLink()}}</span></a></p>
             </div>
         </div>
     </div>

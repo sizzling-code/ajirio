@@ -1,0 +1,16 @@
+<section class="find-gigs">
+  <h2>Find Gigs That Match Your Skills</h2>
+  <div class="gig-list">
+    <div class="gig-card" *ngFor="let gig of gigs">
+      <h3>{{ gig.title }}</h3>
+      <p><strong>Company:</strong> {{ gig.company }}</p>
+      <p><strong>Location:</strong> {{ gig.location }}</p>
+      <p><strong>Pay:</strong> {{ gig.pay }}</p>
+      <div class="skills">
+        <span *ngFor="let skill of gig.skills" class="skill">{{ skill }}</span>
+      </div>
+      <button class="apply-btn">Apply Now</button>
+    </div>
+  </div>
+</section>
+

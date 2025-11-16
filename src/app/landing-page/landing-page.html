@@ -1,0 +1,79 @@
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Empowering Youth Through Gigs</h1>
+    <p>Discover flexible opportunities that match your skills — connect, grow, and earn on JobHub Youth.</p>
+    <div class="hero-buttons">
+      <a routerLink="/find-gigs" class="primary-btn">Find Gigs</a>
+      <a routerLink="/post-gig" class="secondary-btn">Post a Gig</a>
+    </div>
+  </div>
+  <img src="assets/hero-illustration.svg" alt="Youth working illustration" class="hero-img" />
+</section>
+
+<!-- Trusted By Section -->
+<section class="trusted-by">
+  <h2>Trusted By</h2>
+  <div class="logos">
+    <img *ngFor="let logo of trustedByLogos" [src]="logo" alt="Partner logo" />
+  </div>
+</section>
+
+<!-- Featured Gigs Section -->
+<section class="featured-gigs">
+  <h2>Featured Gigs</h2>
+  <div class="gig-grid">
+    <div class="gig-card" *ngFor="let gig of featuredGigs">
+      <h3>{{ gig.title }}</h3>
+      <p><strong>Employer:</strong> {{ gig.employer }}</p>
+      <p><strong>Pay:</strong> {{ gig.pay }}</p>
+      <p><strong>Location:</strong> {{ gig.location }}</p>
+      <button class="apply-btn">View Details</button>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="how-it-works">
+  <h2>How It Works</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-number">1</div>
+      <h4>Create Your Profile</h4>
+      <p>Sign up, showcase your skills, and let employers find you easily.</p>
+    </div>
+    <div class="step">
+      <div class="step-number">2</div>
+      <h4>Find or Post Gigs</h4>
+      <p>Browse gigs that match your interests or post an opportunity for youth.</p>
+    </div>
+    <div class="step">
+      <div class="step-number">3</div>
+      <h4>Get Hired</h4>
+      <p>Collaborate, deliver great work, and grow your professional experience.</p>
+    </div>
+  </div>
+</section>
+<!-- Testimonials Section -->
+<section class="testimonials">
+  <h2>What People Say</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial" *ngFor="let t of testimonials">
+      <img [src]="t.photo" alt="{{t.name}}" class="profile-pic" />
+      <blockquote>"{{ t.quote }}"</blockquote>
+      <p class="author">{{ t.name }}</p>
+      <span class="role">{{ t.role }}</span>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="cta">
+  <h2>Ready to Start Your Journey?</h2>
+  <p>Join ajirioClient today — whether you’re seeking gigs or offering opportunities, we’ve got you covered.</p>
+  <div class="cta-buttons">
+    <a routerLink="/register" class="primary-btn">Join Now</a>
+    <a routerLink="/find-gigs" class="secondary-btn">Explore Gigs</a>
+  </div>
+</section>
+

@@ -1,0 +1,31 @@
+<section class="post-gig">
+  <h2>Post a New Gig</h2>
+  <form (ngSubmit)="submitGig()" #gigForm="ngForm">
+    <label>Title</label>
+    <input type="text" [(ngModel)]="gig.title" name="title" required />
+
+    <label>Description</label>
+    <textarea [(ngModel)]="gig.description" name="description" required></textarea>
+
+    <label>Category</label>
+    <input type="text" [(ngModel)]="gig.category" name="category" />
+
+    <label>Required Skills</label>
+    <input type="text" [(ngModel)]="gig.skills" name="skills" placeholder="e.g. Figma, HTML, Marketing" />
+
+    <label>Pay Rate</label>
+    <input type="text" [(ngModel)]="gig.pay" name="pay" />
+
+    <label>Location</label>
+    <input type="text" [(ngModel)]="gig.location" name="location" />
+
+    <label>Duration</label>
+    <input type="text" [(ngModel)]="gig.duration" name="duration" />
+
+    <button type="submit" [disabled]="!gigForm.valid">Post Gig</button>
+  </form>
+</section>
+
+
+
+

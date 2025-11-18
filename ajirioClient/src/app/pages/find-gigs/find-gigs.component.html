@@ -1,11 +1,14 @@
 <div class="find-gig-container">
-  <h1>Available Gigs</h1>
+  <h1>Find Gigs</h1>
 
-  <div *ngFor="let gig of gigs" class="gig-card">
-    <h2>{{ gig.title }}</h2>
-    <p>{{ gig.description }}</p>
-    <p>Pay: {{ gig.pay }} | Location: {{ gig.location }}</p>
-    <p>Category: {{ gig.category }} | Skills: {{ gig.skills?.join(', ') }}</p>
-    <button (click)="deleteGig(gig._id!)">Delete</button>
+  <div class="gig-list">
+    <app-gig-card
+      [title]="'Web Designer Needed'"
+      [company]="'Ajirio'"
+      [location]="'Remote'"
+      [payRate]="'$50/hr'"
+      [skillMatch]="90"
+      [urgent]="true">
+    </app-gig-card>
   </div>
 </div>

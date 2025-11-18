@@ -1,0 +1,28 @@
+import { Component, OnInit } from '@angular/core';
+import { GigService, Gig } from '../../services/gig.service';
+
+@Component({
+  selector: 'app-find-gig',
+  templateUrl: './find-gig.component.html',
+  styleUrls: ['./find-gig.component.css']
+})
+export class FindGigComponent implements OnInit {
+  gigs: Gig[] = [];
+
+  constructor(private gigService: GigService) {}
+
+  ngOnInit() {
+    this.loadGigs();
+  }
+
+  loadGigs() {
+    this.gigService.getGigs().subscribe((res) => {
+      this.gigs = res;
+    });
+  }
+
+  deleteGig(id: string) {
+    if (!confirm('Delete this gig?')) return;
+    this.gigService.deleteGig(id).subscribe(() => this.loadGigs());
+  }
+}

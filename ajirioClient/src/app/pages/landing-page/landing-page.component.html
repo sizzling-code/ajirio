@@ -1,0 +1,92 @@
+<!--  NAVBAR  -->
+<nav class="navbar">
+  <div class="logo">Ajirio</div>
+
+  <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+  <ul class="nav-links">
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/about">About</a></li>
+    <li><a routerLink="/services">Services</a></li>
+    <li><a routerLink="/contact">Contact</a></li>
+    <li><button routerLink="/login" class="nav-btn">Login</button></li>
+  </ul>
+</nav>
+
+<!-- HERO  -->
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1 class="title">Ajirio</h1>
+    <p class="subtitle">Smart. Fast. Connected.<br>Find talent. Find opportunities.</p>
+
+    <div class="buttons">
+      <button routerLink="/login" class="btn primary">Get Started</button>
+      <button routerLink="/register" class="btn secondary">Create Account</button>
+    </div>
+  </div>
+</section>
+
+<app-gig-card
+  title="Software Developer Intern"
+  company="Ajirio Tech"
+  location="Remote"
+  payRate="$300/month"
+  [skillMatch]="85"
+  [urgent]="true"
+  [remote]="true"
+  duration="3 Months"
+></app-gig-card>
+
+
+<!--  FEATURES -->
+<section class="features">
+  <h2>Why Ajirio?</h2>
+
+  <div class="feature-grid">
+    <div class="feature-card">
+      <h3>Smart Matching</h3>
+      <p>We connect you with the right opportunities using intelligent filters.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Secure Platform</h3>
+      <p>Your data is protected with top-grade encryption and safety protocols.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Fast & Easy</h3>
+      <p>Find jobs, gigs, and clients with zero friction and instant access.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <h2>What Users Say</h2>
+
+  <div class="testimonial-grid">
+    <div class="testimonial-card">
+      <p>"Ajirio helped me land my first freelance gig in under 48 hours!"</p>
+      <h4>- Sarah M.</h4>
+    </div>
+
+    <div class="testimonial-card">
+      <p>"The user experience is so smooth and the job matching is accurate."</p>
+      <h4>- James K.</h4>
+    </div>
+
+    <div class="testimonial-card">
+      <p>"Perfect for small businesses looking for fast talent."</p>
+      <h4>- Daniel O.</h4>
+    </div>
+  </div>
+</section>
+
+<!--  FOOTER  -->
+<app-footer></app-footer>
+<footer class="footer">
+  <p>© 2025 Ajirio. All Rights Reserved.</p>
+</footer>
+

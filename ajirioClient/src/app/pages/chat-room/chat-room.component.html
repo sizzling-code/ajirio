@@ -1,0 +1,23 @@
+<div class="min-h-screen p-4 bg-gray-50 flex items-start justify-center">
+  <div class="w-full max-w-4xl bg-white rounded shadow flex flex-col">
+    <div class="p-4 border-b">
+      <h2 class="text-lg font-semibold">Chat</h2>
+    </div>
+
+    <div class="flex-1 overflow-auto p-4 space-y-3">
+      <div *ngFor="let m of messages" class="flex" [ngClass]="{'justify-end': m.sender?._id === me._id, 'justify-start': m.sender?._id !== me._id}">
+        <div [ngClass]="{'bg-teal-600 text-white': m.sender?._id === me._id, 'bg-gray-100': m.sender?._id !== me._id}" class="p-3 rounded-lg max-w-[70%]">
+          <div *ngIf="m.sender?._id !== me._id" class="text-sm font-medium">{{ m.sender?.username }}</div>
+          <div>{{ m.text }}</div>
+          <div class="text-xs text-gray-400 mt-1 text-right">{{ m.createdAt | date:'shortTime' }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 border-t">
+      <div class="flex gap-2">
+        <input (ngModel)="text" (keydown.enter)="send()" placeholder="Type a message..." class="flex-1 border rounded px-3 py-2" />
+        <button (click)="send()" class="bg-teal-600 text-white px-4 py-2 rounded">Send</button>
+      </div>
+    </div>
+  </div>
+</div>

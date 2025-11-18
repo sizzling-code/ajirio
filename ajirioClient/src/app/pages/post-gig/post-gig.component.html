@@ -1,0 +1,24 @@
+<div class="post-gig-container">
+  <h1>Post a Gig</h1>
+  <form (ngSubmit)="submitGig()" #gigForm="ngForm">
+    <label>Title</label>
+    <input type="text" [(ngModel)]="gig.title" name="title" required />
+
+    <label>Description</label>
+    <textarea [(ngModel)]="gig.description" name="description" required></textarea>
+
+    <label>Pay Rate</label>
+    <input type="text" [(ngModel)]="gig.pay" name="pay" required />
+
+    <label>Location</label>
+    <input type="text" [(ngModel)]="gig.location" name="location" />
+
+    <label>Category</label>
+    <input type="text" [(ngModel)]="gig.category" name="category" />
+
+    <label>Skills</label>
+    <input type="text" [(ngModel)]="gig.skills" name="skills" placeholder="comma separated" />
+
+    <button type="submit" [disabled]="!gigForm.valid">Post Gig</button>
+  </form>
+</div>

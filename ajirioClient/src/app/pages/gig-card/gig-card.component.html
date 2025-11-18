@@ -1,0 +1,27 @@
+<div class="gig-card">
+  
+  <div class="header">
+    <h3>{{ title }}</h3>
+    <span class="badge urgent" *ngIf="urgent">Urgent</span>
+    <span class="badge remote" *ngIf="remote">Remote</span>
+  </div>
+
+  <p class="company">{{ company }}</p>
+
+  <div class="details">
+    <p><strong> Location:</strong> {{ location }}</p>
+    <p><strong> Pay:</strong> {{ payRate }}</p>
+    <p *ngIf="duration"><strong>⏳ Duration:</strong> {{ duration }}</p>
+  </div>
+
+  <div class="skill" *ngIf="skillMatch !== undefined">
+    <p>Skill Match: <strong>{{ skillMatch }}%</strong></p>
+    <div class="skill-bar">
+      <div class="skill-fill" [style.width.%]="skillMatch"></div>
+    </div>
+  </div>
+
+  <button class="apply-btn">Apply Now</button>
+</div>
+
+

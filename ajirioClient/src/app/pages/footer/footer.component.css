@@ -1,0 +1,36 @@
+.footer {
+  background: #0d0d0d;
+  color: #f2f2f2;
+  padding: 3rem 1rem;
+  margin-top: 4rem;
+}
+
+.footer .brand {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.footer-top p {
+  max-width: 300px;
+  margin: 1rem 0;
+  opacity: 0.8;
+}
+
+.social-links a {
+  margin-right: 15px;
+  font-size: 1.5rem;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #0aff9d;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  opacity: 0.6;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+}

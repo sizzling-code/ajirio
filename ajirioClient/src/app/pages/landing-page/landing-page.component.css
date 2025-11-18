@@ -1,0 +1,129 @@
+/* ===================== NAVBAR ===================== */
+.navbar {
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0d0d0d;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #ddd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+.nav-btn {
+  background: #5a4bff;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: #4a3ae0;
+}
+
+/* Mobile menu */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 60%;
+    height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    background: #111;
+    border-left: 1px solid #222;
+    border-bottom: 1px solid #222;
+    transition: 0.3s;
+    padding: 0;
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    height: 250px;
+    padding: 20px;
+  }
+}
+
+
+/* ===================== TESTIMONIALS ===================== */
+.testimonials {
+  padding: 60px 20px;
+  background: #101010;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.testimonial-card {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ddd;
+  box-shadow: 0 0 10px #000;
+  transition: 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  background: #222;
+}
+
+.testimonial-card h4 {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #fff;
+}

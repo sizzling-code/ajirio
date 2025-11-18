@@ -1,12 +1,15 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ServiceComponent, SocketMessage } from '../users-list/users-list.component';
-import { ServicesComponent } from '../services/services.component';
+import { GigService, SocketMessage } from '../../services/gig.service';
+import { GigService } from '../../services/gig.service';
 import { Subscription } from 'rxjs';
+import { ChatService } from '../../services/chat.service';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-chat-room',
+
   templateUrl: './chat-room.component.html'
 })
 export class ChatRoomComponent implements OnInit, OnDestroy {
@@ -17,7 +20,7 @@ export class ChatRoomComponent implements OnInit, OnDestroy {
 
   private sub!: Subscription;
 
-  constructor(private route: ActivatedRoute, private chat: ServicesComponent, private api: ApiService) {}
+  constructor(private route: ActivatedRoute, private chat: ChatService, private api: GigService) {}
 
   async ngOnInit() {
     this.me = JSON.parse(localStorage.getItem('user') || 'null');

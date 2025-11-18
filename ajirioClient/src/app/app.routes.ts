@@ -1,6 +1,4 @@
 import { Routes } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
-
 
 import { AjirioLoginComponent } from './pages/ajirio-login/ajirio-login.component';
 import { AjirioRegisterComponent } from './pages/ajirio-register/ajirio-register.component';

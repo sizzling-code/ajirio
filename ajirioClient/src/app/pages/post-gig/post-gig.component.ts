@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 import { GigService, Gig } from '../../services/gig.service';
-
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-post-gig',
+  standalone: true,
+  imports: [FormsModule, CommonModule],  
   templateUrl: './post-gig.component.html',
   styleUrls: ['./post-gig.component.css']
 })

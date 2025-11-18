@@ -3,8 +3,9 @@ import { GigService, Gig } from '../../services/gig.service';
 
 @Component({
   selector: 'app-find-gig',
-  templateUrl: './find-gig.component.html',
-  styleUrls: ['./find-gig.component.css']
+  standalone: true,
+  templateUrl: './find-gigs.component.html',
+  styleUrls: ['./find-gigs.component.css']
 })
 export class FindGigComponent implements OnInit {
   gigs: Gig[] = [];

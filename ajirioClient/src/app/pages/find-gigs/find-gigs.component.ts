@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { GigService, Gig } from '../../services/gig.service';
+import { GigCardComponent } from '../gig-card/gig-card.component';
 
 @Component({
   selector: 'app-find-gig',
   standalone: true,
+  imports: [GigCardComponent],
   templateUrl: './find-gigs.component.html',
   styleUrls: ['./find-gigs.component.css']
 })

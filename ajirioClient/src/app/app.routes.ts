@@ -13,11 +13,6 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 
 export const routes: Routes = [
   {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: 'login'
-  },
-  {
     path: 'login',
     title: 'App login page',
     component: AjirioLoginComponent
@@ -27,28 +22,27 @@ export const routes: Routes = [
     title: 'Register page',
     component: AjirioRegisterComponent
   },
+
   {
-    path: '**',
-    redirectTo: 'login'
-  },
-  
-  { path: 'dashboard', 
+    path: 'dashboard',
     title: "Dashboard",
-    component: AjirioDashboardComponent },
+    component: AjirioDashboardComponent
+  },
 
-     { path: 'chat-room', component: ChatRoomComponent },
+  { path: 'chat-room', component: ChatRoomComponent },
 
-     { path: 'find-gigs', component: FindGigComponent },
-     { path: '', redirectTo: '/landing', pathMatch: 'full' },
+  { path: 'find-gigs', component: FindGigComponent },
 
-     { path: 'post-gig', component: PostGigComponent },
-     { path: '', redirectTo: '/landing', pathMatch: 'full' },
 
-     { path: 'footer', component: FooterComponent },
+  { path: 'post-gig', component: PostGigComponent },
 
-     { path: 'header', component: HeaderComponent },
+  { path: '', redirectTo: '/landing-page', pathMatch: 'full' },
 
-     { path: 'landind-page', component: LandingPageComponent },
+  { path: 'footer', component: FooterComponent },
+
+  { path: 'header', component: HeaderComponent },
+
+  { path: 'landing-page', component: LandingPageComponent },
 
 
 ];

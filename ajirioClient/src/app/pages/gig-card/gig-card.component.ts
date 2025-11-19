@@ -1,8 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-gig-card',
   templateUrl: './gig-card.component.html',
+  imports: [CommonModule],
   styleUrls: ['./gig-card.component.css']
 })
 export class GigCardComponent {
